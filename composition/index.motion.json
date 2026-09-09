@@ -1,0 +1,81 @@
+{
+  "duration": 29,
+  "assertions": [
+    {
+      "kind": "staysInFrame",
+      "selector": "#capacity-0-0"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#capacity-0-1"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#capacity-0-2"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#capacity-1-0"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#capacity-1-1"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#capacity-1-2"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#capacity-2-0"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#capacity-2-1"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#capacity-2-2"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#network-A-0"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#network-A-1"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#network-A-2"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#network-A-3"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#network-A-4"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#network-A-5"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#network-D-0"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#network-D-1"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#network-D-2"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#network-D-3"
+    }
+  ]
+}

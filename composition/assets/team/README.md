@@ -1,0 +1,1 @@
+User-supplied founder portraits and Inria logo, added 2026-09-08. Original files copied unchanged. Nathalia: supplied white-shirt portrait; Juan: juan.jpg; Inria: inria_rouge.png. Display crops are CSS only.

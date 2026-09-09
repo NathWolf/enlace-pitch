@@ -1,0 +1,51 @@
+@font-face{font-family:"Apple Color Emoji";src:local("Apple Color Emoji")}
+/* White stage, one focal action per beat. All motion is owned by the timeline. */
+#market-opening{position:absolute;inset:0;width:1920px;height:1080px;background:#fff;color:#101426;z-index:6;opacity:0;visibility:hidden;overflow:hidden}
+.market-logo{position:absolute;z-index:2;left:960px;top:540px;display:grid;place-items:center;transform:translate(-50%,-50%);opacity:0;will-change:transform}
+.market-logo img{display:block;object-fit:contain;width:100%;height:100%}
+.logo-airbnb{width:220px;height:240px}.logo-uber{width:350px;height:155px}.logo-enlace{width:610px;height:145px}
+.market-world{position:absolute;inset:0;opacity:0}
+.market-heading{position:absolute;left:150px;right:150px;top:220px;text-align:center;font-size:49px;line-height:1.16;letter-spacing:-.035em;font-weight:580;opacity:0}
+.market-subtitle{position:absolute;left:150px;right:150px;top:316px;text-align:center;font-size:26px;letter-spacing:-.015em;color:#5c6c7d;opacity:0}
+.market-art{position:absolute;inset:0;width:1920px;height:1080px;overflow:visible}
+.market-emoji{font-family:"Apple Color Emoji",sans-serif;font-size:124px;font-weight:400;letter-spacing:0;fill:#26374b;stroke:none}.market-emoji.emoji-small{font-size:37px}.tourist-bag .market-emoji{font-size:52px}
+.market-art text{text-anchor:middle}
+.source-object,.need-object{color:#2b3c4e;opacity:0;will-change:transform}.source-variant,.need-consumer,.need-business{opacity:0}
+.consumer-labels,.focus-parties{opacity:0}.consumer-labels text,.focus-parties text{fill:#607084;font-size:21px;font-weight:600;letter-spacing:2.4px}
+.resource-label{font-size:29px;fill:#26374b;font-weight:540;opacity:0;letter-spacing:-.5px}
+.need-slot{opacity:0}.need-slot rect{fill:#fff;stroke:#b6c7d8;stroke-width:2;stroke-dasharray:5 6}
+.capacity-unit{opacity:0;will-change:transform}.unit-surface{fill:#edf5ff;stroke:#1677d2;stroke-width:2}.unit-symbol{color:#0766ba;opacity:0}.unit-symbol use{stroke-width:2}
+.unit-check{fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;opacity:0}
+.booking-status{font-size:24px;fill:#145e9f;opacity:0;text-anchor:middle!important;font-weight:500}
+.remaining,.incoming{fill:#607084;font-size:24px;opacity:0}
+.focus-labels,.fulfilled-labels{opacity:0}.focus-labels text,.fulfilled-labels text{font-size:29px;fill:#26374b;font-weight:540;letter-spacing:-.5px}
+.rules-band{opacity:0}.rule-party{fill:#26374b;font-size:29px;font-weight:580;letter-spacing:-.5px}.rule-detail{fill:#607084;font-size:27px}.rule-pass{opacity:0}.rule-pass circle{fill:#edf5ff}.rule-pass path{fill:none;stroke:#096abb;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+ .carrier-object{opacity:0}.carrier-label{font-size:29px;fill:#26374b;font-weight:540;letter-spacing:-.5px}
+.exchange-result,.reserved-result,.agreed-result{opacity:0}.exchange-result text{fill:#095fa6;font-size:30px;font-weight:550;letter-spacing:-.4px}.exchange-result path{fill:none;stroke:#096abb;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.market-conclusion{position:absolute;left:130px;right:130px;top:932px;text-align:center;font-size:29px;font-weight:550;line-height:1.2;letter-spacing:-.025em;opacity:0}
+.market-note{position:absolute;left:0;right:0;top:931px;text-align:center;font-size:25px;color:#607084;opacity:0}
+.handoff-labels{opacity:0}.handoff-labels text{fill:#26374b;font-size:30px;font-weight:550}.handoff-labels text:last-child{font-size:33px;font-weight:500;letter-spacing:-.5px}
+/* One shared allocation round: source colours persist through every split. */
+.network-scene,.network-arena,.network-hub,.network-links,.network-space,.pool-recipient{opacity:0}
+.network-eyebrow{fill:#607084;font-size:21px;font-weight:600;letter-spacing:2.1px}
+.participant-name{fill:#26374b;font-size:29px;font-weight:580;letter-spacing:-.5px}
+.participant-icon .market-emoji{font-size:100px}
+.offer-A .participant-name{fill:#126ac0}.offer-D .participant-name{fill:#08776f}
+.offer-outline{fill:#f7faff;stroke:#c1d3e5;stroke-width:1.5}.bid-outline{fill:#fff;stroke:#a4b9cd;stroke-width:2;stroke-dasharray:5 5}
+.network-space{will-change:transform}.network-space rect{stroke-width:0}.space-A rect{fill:#126ac0}.space-D rect{fill:#08776f}
+.network-space text{fill:#fff;font-size:19px;font-weight:600}
+.network-arena rect{fill:#f3f7fc}
+.pool-recipient{fill:#334a63;font-size:28px;font-weight:650}
+.network-links path{stroke:#a6b9cc;stroke-width:2.5;stroke-linecap:round}.network-links .link-A{stroke:#126ac0}.network-links .link-D{stroke:#08776f}
+.network-hub rect{fill:#f0f6fd}
+
+/* Only the five Enlace participants vary; the default presentation stays native emoji. */
+.participant-vector{display:none;color:#26374b}
+.participant-vector>svg{overflow:visible}
+#market-opening[data-icon-style="phosphor"] .participant-emoji{display:none}
+#market-opening[data-icon-style="phosphor"] .participant-vector{display:inline}
+
+/* Match visible logo centers, including SVG canvas and font metrics. */
+.market-logo img{min-width:0;min-height:0}
+.logo-uber{height:118px}
+.logo-enlace .enlace-wordmark{position:relative;top:-1.5px}

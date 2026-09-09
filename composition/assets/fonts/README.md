@@ -1,0 +1,1 @@
+IBM Plex Sans Bold, weight 700. Original font file from IBM/plex, packages/plex-sans/fonts/complete/ttf/IBMPlexSans-Bold.ttf. Retrieved 2026-09-08. Source: https://github.com/IBM/plex . Licence: IBM-Plex-LICENSE.txt. Used as live text for every Enlace wordmark. No synthetic bolding.

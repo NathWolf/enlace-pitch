@@ -1,0 +1,15 @@
+{
+  "name": "enlace-deck",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs --port 3004",
+    "studio": "npx --yes hyperframes@0.8.31 preview ./composition --background",
+    "check": "npx --yes hyperframes@0.8.31 check ./composition",
+    "snapshot": "npx --yes hyperframes@0.8.31 snapshot ./composition",
+    "publish": "npx --yes hyperframes@0.8.31 publish ./composition",
+    "check:opening": "node scripts/check-opening.mjs",
+    "export:pdf": "node scripts/export-pdf.mjs",
+    "check:icon-review": "node scripts/check-icon-review.mjs"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "package": "@phosphor-icons/core",
+  "version": "2.1.1",
+  "weight": "duotone",
+  "license": "MIT",
+  "repository": "https://github.com/phosphor-icons/core",
+  "tarball": "https://registry.npmjs.org/@phosphor-icons/core/-/core-2.1.1.tgz",
+  "integrity": "sha512-v4ARvrip4qBCImOE5rmPUylOEK4iiED9ZyKjcvzuezqMaiRASCHKcRIuvvxL/twvLpkfnEODCOJp5dM4eZilxQ==",
+  "files": {
+    "truck-duotone.svg": "278e738442932c789d06c0f7abce9214cb1daa32059b4e36d4e9d86a6097bddc",
+    "factory-duotone.svg": "39141f1b2caca5afef2dc243ec0c5c97c3243a58d7f9fd7d5537d0e2e1a55139",
+    "storefront-duotone.svg": "9e755963f1672b9d45a199797cfb3479dd13517690b08f76bb013a08043cc2b3",
+    "buildings-duotone.svg": "d6843f7a68d132f539effacbfc5151d6a506ee983f1a409ad98a868d8be14713"
+  },
+  "rendering": "Original SVG geometry and 0.2 fill opacity preserved; currentColor is set to #26374b by the composition. icons.js embeds these exact SVG strings for synchronous, offline rendering."
+}
