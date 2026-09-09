@@ -1,4 +1,4 @@
-/* Ten presentation scenes. Holds are speaking beats inside a scene, not pages. */
+/* Eleven presentation scenes. Holds are speaking beats inside a scene, not pages. */
 (function () {
   const opening = [
     {id:'TITLE',label:'Enlace',time:.8,note:'Let the Enlace name register. Then begin the familiar exchange pattern.'},
@@ -19,6 +19,8 @@
     'Enlace provides the market mechanism for a private logistics market. Participants submit supply and demand, together with operational and contractual constraints. The market operator defines the rules. Enlace combines mathematical optimization and market design to clear the market: determining which transactions occur, what quantity, at what price and on what terms. In this illustrative animation, Carrier A offers four units and Carrier D two; Shippers B and C each request three. A supplies three units to B and one to C, while D supplies two to C. A candidate connection from D to B fails the constraint check. All six units retain their source colors. Euro-and-check marks represent prices and terms returned with the allocation, without asserting actual prices or customer results. Transport capacity is the initial example.');
   scene('S04','Who pays and why','The customer',9,[[2,'Four buyers and their economic incentives'],[9,'Each runs its own logistics market']],
     'Different organizations can create an Enlace market, but they pay for different reasons. A company wants to reduce logistics cost. A 3PL can create a new service and monetize it. A consortium creates savings for its members. A public or infrastructure operator wants better use of capacity across its ecosystem. In every case, Enlace provides the market mechanism that lets the operator run that market. These are potential buyer categories and incentives, not claims of four validated customer segments. The initial go-to-market remains the design-partner market with two to three shippers.');
+  scene('S11','Competition','Competition',8,[[8,'Who controls each network?']],
+    'The comparison is about who controls the exchange environment. Amazon Flex focuses on Amazon deliveries. Uber Freight and Transporeon support freight management. Enlace is designed for a customer-defined logistics market where the operator controls participation, rules and the exchange mechanism. This is simplified public positioning, not an exhaustive feature audit.');
   scene('S06','Go to market','Go to market',15,[[2,'Agreed to start with a design partner'],[8,'Now: two to three shippers and their carriers'],[15,'Expand the market']],
     'We have agreed to start working with a design partner. We are now scoping the first market around two to three shippers with compatible freight lanes and their existing carriers. The goal is to prove repeatable capacity exchanges. Then we expand the market: more clients, more lanes, more participants and more resource types, opening new markets. The initial scope does not imply that all shippers are signed or live.');
   scene('S05','Business model','Business model',8,[[2.5,'A €200k+ annual starting point'],[8,'Expand revenue with market scope']],
@@ -34,6 +36,17 @@
     'Transport capacity is the first resource. The ambition is an Enlace decision and pricing layer supporting exchanges across logistics resources. Close: Enlace provides infrastructure for logistics markets. Stop here and invite discussion.');
 
   const table=(head,rows)=>`<table class="appendix-table"><thead><tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+  const competitionTable=()=>table(['','Amazon Flex','Uber Freight','Transporeon','<span class="enlace-inline">Enlace</span>'],[
+    ['Core purpose','Amazon deliveries','Freight management','Transport management','Logistics exchanges'],
+    ['Procurement','No','Yes','Yes','Yes'],
+    ['Multi-shipper sharing','No','Yes','Unconfirmed','Yes'],
+    ['Participation control','Amazon','Uber Freight','Shipper','Network owner'],
+    ['Rule definition','Amazon','Shipper + platform','Shipper + platform','Network owner'],
+    ['Orchestrator','Amazon','Uber Freight','Shipper','Customer'],
+    ['Own exchange network','No','No','Partial','Yes'],
+    ['Resources','<span class="comparison-emoji" role="img" aria-label="Last-mile delivery capacity">🚗</span>','<span class="comparison-emoji" role="img" aria-label="Road and intermodal freight capacity">🚛 🚆</span>','<span class="comparison-emoji" role="img" aria-label="Transportation capacity">🚛</span>','<span class="comparison-emoji" role="img" aria-label="Transport, warehouses, shipping and containers">🚛🏭🚢📦</span>']
+  ]).replace('class="appendix-table"','class="appendix-table comparison-table"');
+  window.ENLACE_COMPETITION_TABLE=competitionTable();
   const note=text=>`<p class="appendix-foot">${text}</p>`;
   const grid=rows=>`<div class="appendix-grid">${rows.map(([a,b])=>`<div><h2>${a}</h2><p>${b}</p></div>`).join('')}</div>`;
   const appendix = [
@@ -47,18 +60,6 @@
     {id:'A03',label:'Worked exchange example',headline:'Example: six pallets on an existing route.',
       html:table(['Participant','Operational requirement','Commercial condition'],[['Offering shipper','Lille → Paris · 8 positions','Minimum €450'],['Requesting shipper','6 pallets · before 17:00','Maximum €600'],['Existing carrier','Pickup window and detour','Permission and compensation']])+note('Illustrative proposal: 6 pallets at €520, subject to all rules and approvals.'),
       note:'This hypothetical numerical example is separate from the simplified main-scene allocation. It is not customer data. The proposed €520 sits between €450 and €600, but that does not alone prove feasibility or a benefit for every party. Route, cargo, timing, handling, detour costs and carrier compensation must also be validated.'},
-    {id:'A04',label:'Competition',headline:'Who controls each network?',
-      html:table(['','Amazon Flex','Uber Freight','Transporeon','<span class="enlace-inline">Enlace</span>'],[
-        ['Core purpose','Amazon deliveries','Freight management','Transport management','Logistics exchanges'],
-        ['Procurement','No','Yes','Yes','Yes'],
-        ['Multi-shipper sharing','No','Yes','Unconfirmed','Yes'],
-        ['Participation control','Amazon','Uber Freight','Shipper','Network owner'],
-        ['Rule definition','Amazon','Shipper + platform','Shipper + platform','Network owner'],
-        ['Orchestrator','Amazon','Uber Freight','Shipper','Customer'],
-        ['Own exchange network','No','No','Partial','Yes'],
-        ['Resources','<span class="comparison-emoji" role="img" aria-label="Last-mile delivery capacity">🚗</span>','<span class="comparison-emoji" role="img" aria-label="Road and intermodal freight capacity">🚛 🚆</span>','<span class="comparison-emoji" role="img" aria-label="Transportation capacity">🚛</span>','<span class="comparison-emoji" role="img" aria-label="Transport, warehouses, shipping and containers">🚛🏭🚢📦</span>']
-      ]).replace('class="appendix-table"','class="appendix-table comparison-table"')+note('Public product positioning · Enlace: proposed scope · Unconfirmed: not established in cited materials.'),
-      note:'Simplified from the user-supplied comparison. Amazon Flex executes Amazon deliveries with independent drivers; it is not procurement for external shippers. Uber Freight supports procurement and explicitly documents multi-shipper co-loading and shared capacity. Shippers can bring preferred carriers and configure controls inside Uber Freight workflows; Uber Freight orchestrates its managed multi-shipper model. Transporeon supports shipper-defined carrier pools, allocation rules and transport processes. Its multi-shipper capacity-sharing entry is unconfirmed by the cited assignment material, not a claim that it cannot do it. Partial means customers configure transportation workflows, rather than establishing the broader customer-defined exchange described for Enlace. Enlace’s proposed scope gives the network owner control over participation, operational and economic rules, with the customer orchestrating and Enlace supplying the engine. Procurement is one possible network configuration. Transport is the initial resource; warehouses, shipping and container capacity are the wider vision. Public positioning is not an exhaustive feature audit. Sources: Amazon Flex; Uber Freight multi-shipper networks, Exchange and Managed Transportation; Transporeon Transport Assignment.'},
     {id:'A05',label:'Why now',headline:'eFTI and transport-system integrations.',
       html:grid([['Electronic freight information','From 9 July 2027, authorities must accept information through certified eFTI platforms.'],['Data sharing','European initiatives support data sharing between transport systems.'],['Operational data','TMS, ERP and carrier data can provide inputs, with permission and integration.'],['Enlace’s task','Use approved data to allocate resources and determine terms.']]),
       note:'eFTI is a regulatory tailwind, not a universal requirement for companies to digitize and not evidence that Enlace can access their data. Actual data access, quality, integration and permission must be established for each deployment.'},
@@ -72,7 +73,7 @@
       html:grid([['Eurostat · 2024','21.6% of EU road-freight vehicle-km travelled empty.'],['Fraunhofer IIS · 2023','EU30 logistics: ≈€1.6T. Transport: €816B; road share: 83%.'],['European Commission','eFTI implementation and the mobility data space.'],['Public product positioning','Transporeon, Uber Freight and collaboration research.']])+note('Pricing, network counts and rollout are proposed assumptions. Full links: SOURCES.md.'),
       note:'Sources were checked on 8 September 2026. Road spend is rounded to approximately €680 billion from €816 billion × 83%; the public summary does not substantiate a precise €681 billion. EU30 is EU27 plus UK, Norway and Switzerland. Company illustrations and pricing scenarios are not measured customer results.'},
   ];
-  // Investor Q&A appendix. Existing competition artwork and copy remain unchanged.
+  // Investor Q&A appendix.
   const prior=Object.fromEntries(appendix.map(s=>[s.id,s]));
   const foot=(text)=>`<p class="diligence-foot">${text}</p>`;
   const columns=(items)=>`<div class="diligence-columns">${items.map(([h,p])=>`<section><h2>${h}</h2><p>${p}</p></section>`).join('')}</div>`;
@@ -97,7 +98,6 @@
       'Belgian case: Vanovermeire et al., DOI 10.1080/13675567.2013.865719. The result depends on the studied coalition and delivery flexibility. U.S. FMCG case: Sternberg et al., DOI 10.1111/jscm.12278, reports $250,000 invested and $2M saved in year one. Collaboration lasted two years and savings were lower than expected. These selected historical cases establish possibility, not typical savings or an Enlace result.'),
     item('A02','Pricing model','€200k+ per private network, per year.',
       columns([['Recurring platform','More participants<br>More resource types'],['Deployment','Integration and rollout<br>Charged separately'],['Later option','Usage fee<br>Excluded from the base case']])+foot('Starting fee. No fixed price per participant assumed.'),prior.A02.note),
-    prior.A04,
     item('D06','Global market size','Private logistics markets × annual platform fee.',
       `<div class="diligence-context">$12.29T global logistics costs · $3.8T global road freight</div>`+compact(['Private logistics markets','Annual fee','ARR floor'],[['500','€200k','€100M'],['2,000','€200k','€400M'],['5,000','€200k','€1B']])+foot('2024 estimates. ARR scenarios exclude expansion and usage.'),
       'Logistics costs: Armstrong & Associates, June 2026 report, 2024 estimate. Road freight: Frost & Sullivan as cited in the HKEX filing dated 27 October 2025. These separate estimates use different methods, so no road share is derived. The network-count scenarios are arithmetic, not a pipeline or forecast. Both include only recurring platform revenue.'),
@@ -156,7 +156,7 @@
   );
 
   // Keep the requested investor follow-up topics only.
-  const retainedTopics = new Set(['A04','D06','D20','D22','D23','D25','A08']);
+  const retainedTopics = new Set(['D06','D20','D22','D23','D25','A08']);
   appendix.splice(0, appendix.length, ...appendix.filter(s => retainedTopics.has(s.id)));
   for (const slide of appendix) {
     slide.html = slide.html.replace(/<p class="(?:diligence-foot|appendix-foot)">[^<]*[Ii]llustrative[^<]*<\/p>/g, '');

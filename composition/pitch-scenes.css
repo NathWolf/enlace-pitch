@@ -25,6 +25,15 @@ h1,h2,p{margin:0}.scene-title{position:absolute;left:120px;top:130px;width:1680p
 .comparison-table tr:last-child td{height:83px}
 .comparison-emoji{display:block;white-space:nowrap;font-family:"Apple Color Emoji",sans-serif;font-size:43px;line-height:1.25;font-weight:400;letter-spacing:0;color:#26374b}
 #scene-A04 .appendix-foot{font-size:23px;margin-top:23px;line-height:1.3}
+.main-competition{position:absolute;left:120px;right:120px;top:270px;bottom:72px}
+.main-competition .competition-intro{font-size:28px;color:#596579;letter-spacing:.04em;margin-bottom:18px}
+.main-competition .comparison-table{width:100%;font-size:26px;line-height:1.12}
+.main-competition .comparison-table th{font-size:29px;padding:14px 14px 17px}
+.main-competition .comparison-table th:first-child{width:300px}
+.main-competition .comparison-table td{height:60px;padding:11px 14px}
+.main-competition .comparison-table td:first-child{font-size:26px}
+.main-competition .comparison-table tr:last-child td{height:68px}
+.competition-note{margin-top:18px;font-size:27px;color:#26374b}
 
 /* Shared enclosure treatment across the main deck and appendix. */
 .architecture-core{border-radius:32px}

@@ -27,6 +27,7 @@
         <p class="clearing-result">Allocation + prices + terms <span>✓</span></p>
       </div>`,
     S04:title('Who pays for Enlace and why?')+`<div class="buyer-types">${[['🏭','Enterprise','Lower logistics cost'],['🚛','3PL / operator','New service revenue'],['🤝','Consortium','Shared savings'],['🏗️','Public / infrastructure','Better capacity use']].map(([icon,buyer,motive])=>`<div class="buyer-type"><span class="html-emoji">${icon}</span><h2>${buyer}</h2><span class="buyer-down">↓</span><p>${motive}</p></div>`).join('')}</div><svg class="buyer-converge" viewBox="0 0 1920 1080" aria-hidden="true"><path d="M330 650V715H1590V650M750 650V715M1170 650V715M960 715V780"/><path d="m948 766 12 14 12-14"/></svg><div class="buyer-network"><h2>Runs its own logistics market</h2><p>Powered by <span class="enlace-inline">Enlace</span></p></div>`,
+    S11:title('Who controls each network?')+`<div class="main-competition"><div class="competition-intro">A market operator’s control surface</div>${window.ENLACE_COMPETITION_TABLE}<p class="competition-note">Enlace gives the network owner control over participation, rules and the exchange mechanism.</p></div>`,
     S05:title('An annual platform fee per private logistics market.')+`<div class="price-hero"><div class="price-amount">€200k<span>+</span></div><p class="per-year">Initial annual platform fee per private logistics market</p><p class="deployment">+ deployment / integration</p></div>`+svg(`
       <g class="scope-people">${T('Participants',1370,375,'growth-label')}${[0,1,2,3,4].map((_,i)=>`<g class="scope-person sp-${i}">${E('🏢',1155+i*110,465,78)}</g>`).join('')}</g>
       <g class="scope-resources">${T('Resources',1370,591,'growth-label')}${resourceTypes.slice(0,4).map(([g],i)=>`<g class="scope-resource sr-${i}">${E(g,1205+i*110,683,82)}</g>`).join('')}</g>
@@ -90,6 +91,7 @@
         set('.clear-unit',{attr:{'data-state':'agreed'}},15.7);show('.clearing-result',16,.5);
       }
       if(s.id==='S04'){set('.buyer-converge,.buyer-network',{opacity:0});show('.buyer-converge,.buyer-network',2.4,.3);}
+      if(s.id==='S11'){set('.main-competition',{opacity:0});show('.main-competition',.35,.55);}
       if(s.id==='S05'){
         enter('.price-hero',.4);set('.scope-person,.scope-resource,.scope-growth',{opacity:0});
         show('.sp-0,.sp-1,.sr-0',.8);show('.sp-2',2.9);show('.sp-3',3.35);show('.sp-4',3.8);
